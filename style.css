@@ -1,0 +1,207 @@
+:root {
+  --primary-color: #1a73e8;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --nav-bg: #0a192f;
+  --background-start: #0a192f;
+  --background-end: #112240;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--text-light);
+  background: linear-gradient(135deg, var(--background-start) 0%, var(--background-end) 100%);
+  min-height: 100vh;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--nav-bg);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.nav-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  opacity: 0.9;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  #nav-list {
+    flex-direction: column;
+  }
+}
+
+#welcome-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.welcome-content {
+  max-width: 800px;
+}
+
+.welcome-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #64ffda, #1a73e8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome-content h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #8892b0;
+}
+
+.welcome-content p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #8892b0;
+}
+
+#contact {
+  padding: 5rem 2rem;
+  background: none;
+  text-align: center;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.contact-detail i {
+  color: var(--primary-color);
+}
+
+.contact-detail:hover {
+  color: var(--primary-color);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 2rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin: 0;
+  color: var(--text-light);
+  text-align: center;
+}
+
+#projects {
+  padding: 60px 0;
+  background: none;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  
+  .welcome-content h1 {
+    font-size: 2rem;
+  }
+  
+  .welcome-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zM37.656 0l8.485 8.485-1.414 1.414L36.242 0h1.414zM22.344 0L13.858 8.485 15.272 9.9l8.485-8.485H22.344zM32.4 0l10.142 10.142-1.414 1.414L30.986 0H32.4zm-6.8 0L15.458 10.142 16.872 11.556 27.014 0h-1.414zM27.157 0l12 12-1.414 1.414L24.586 0h2.57zM38.628 0l12 12-1.414 1.414L36.157 0h2.47zM33.9 0l12 12-1.414 1.414L31.43 0h2.47zm-6.8 0L39.1 12l-1.414 1.414L30.43 0h-3.33zm-6.8 0l12 12-1.414 1.414L23.63 0h-3.33zm-6.8 0l12 12-1.414 1.414L16.83 0h-3.33zM13.9 0l12 12-1.414 1.414L11.43 0h2.47zm-6.8 0L19.1 12l-1.414 1.414L9.43 0h-2.33zm-6.8 0l12 12-1.414 1.414L2.63 0h-2.33zM0 0l12 12-1.414 1.414L0 2.544V0z' fill='rgba(255, 255, 255, 0.02)' fill-rule='evenodd'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
