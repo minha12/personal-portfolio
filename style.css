@@ -15,6 +15,7 @@ body {
   color: var(--text-light);
   background: linear-gradient(135deg, var(--background-start) 0%, var(--background-end) 100%);
   min-height: 100vh;
+  margin-right: 15px; /* Add margin for scrollbar */
 }
 
 #navbar {
@@ -24,11 +25,11 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 15px); /* Adjust width to account for body margin */
   background: var(--nav-bg);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 2rem;
+  padding: 1rem calc(2rem + 15px) 1rem 2rem; /* Increased right padding */
   z-index: 1000;
 }
 
