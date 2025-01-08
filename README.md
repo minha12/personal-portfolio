@@ -32,6 +32,7 @@ personal-portfolio/
 │   ├── tribute-page.png
 │   ├── tech-doc-page.png
 │   └── product-landing-page.png
+    └── ...
 ├── LICENSE
 └── README.md
 ```
